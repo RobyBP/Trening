@@ -6,11 +6,11 @@ class ProvjeraUnosa {
             clan.noviClan();
         }
         else if(prviUnos.equalsIgnoreCase("Evidencija")){
-            System.out.println("Trenutno nemamo nikakvu Bazu podataka :(");
+            System.out.println("Trenutno nemamo nikakvu bazu podataka :(");
             povratak.odabir();
         }
         else{
-            System.out.println("Morate unjeti Unos ili evidencija!");
+            System.out.println("Morate unjeti evidencija ili unos!");
             povratak.odabir();
         }
     }

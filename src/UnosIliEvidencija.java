@@ -4,7 +4,7 @@ class UnosIliEvidencija {
     void odabir(){
         ProvjeraUnosa provjera = new ProvjeraUnosa();
         Scanner reader = new Scanner(System.in);
-        System.out.println("Za unos novog člana unesite 'Unos', a za evidenciju članova unesite 'Evidencija'");
+        System.out.println("Za unos novog člana unesite 'Unos', a za evidenciju članova unesite 'Evidencija', a za izlaz 'izlaz'");
         String unos = reader.nextLine();
         provjera.provjera(unos);
     }
