@@ -1,3 +1,5 @@
+package com.robibp.trening;
+
 import java.util.Scanner;
 
 class UnosIliEvidencija {
