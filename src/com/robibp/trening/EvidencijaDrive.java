@@ -7,7 +7,7 @@ class EvidencijaDrive {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         MenuChooser menuChooser = new MenuChooser();
-        MenuEnum odabraniMenu = menuChooser.askUser();
+        MenuEnum odabraniMenu = null;
         while (odabraniMenu != MenuEnum.IZLAZ) {
             odabraniMenu = menuChooser.askUser();
             switch (odabraniMenu) {
