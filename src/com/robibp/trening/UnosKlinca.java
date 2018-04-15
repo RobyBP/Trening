@@ -16,9 +16,10 @@ class UnosKlinca {
         return true;
     }
 
-    String validacijaImena(String klinac) {
+
+    String validacijaImena() {
         Scanner scanner = new Scanner(System.in);
-        klinac = null;
+        String klinac = null;
         boolean upit;
         while (klinac == null) {
             System.out.println("Unesite ime klinca");
