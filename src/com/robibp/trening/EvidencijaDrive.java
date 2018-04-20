@@ -6,6 +6,7 @@ import java.util.Scanner;
 class EvidencijaDrive {
 
     public static void main(String[] args) {
+        Klinac podatak = new Klinac();
         UnosKlinca provjeraUnosa = new UnosKlinca();
         Scanner scanner = new Scanner(System.in);
         MenuChooser menuChooser = new MenuChooser();
@@ -16,8 +17,7 @@ class EvidencijaDrive {
             switch (odabraniMenu) {
                 case UNOS:
                     System.out.println("Odabrali ste UNOS!");
-                    String klinac = provjeraUnosa.validacijaImena();
-                    
+                    klinci.add(provjeraUnosa.unos());
                     break;
                 case EVIDENCIJA:
                     System.out.println("Odabrali ste EVIDENCIJA!");
