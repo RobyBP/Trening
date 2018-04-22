@@ -1,26 +1,29 @@
 package com.robibp.trening;
 
 import java.util.ArrayList;
+import java.util.List;
 import java.util.Scanner;
 
 class EvidencijaDrive {
 
     public static void main(String[] args) {
-        Klinac podatak = new Klinac();
-        UnosKlinca provjeraUnosa = new UnosKlinca();
-        Scanner scanner = new Scanner(System.in);
+        Klinac klinac = new Klinac();
+        UnosKlinca unosKlinca = new UnosKlinca();
         MenuChooser menuChooser = new MenuChooser();
         MenuEnum odabraniMenu = null;
-        ArrayList<Klinac> klinci = new ArrayList<>();
+        List<Klinac> klinci = new ArrayList<>();
         while (odabraniMenu != MenuEnum.IZLAZ) {
             odabraniMenu = menuChooser.askUser();
             switch (odabraniMenu) {
                 case UNOS:
                     System.out.println("Odabrali ste UNOS!");
-                    klinci.add(provjeraUnosa.unos());
+                    klinci.add(unosKlinca.unos());
                     break;
                 case EVIDENCIJA:
                     System.out.println("Odabrali ste EVIDENCIJA!");
+                    for(Klinac clan : klinci){
+                        System.out.println(clan.getIme());
+                    }
                     break;
                 case IZLAZ:
                     System.out.println("Odabrali ste IZLAZ!");

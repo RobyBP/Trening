@@ -5,20 +5,22 @@ import java.util.Scanner;
 class UnosKlinca {
 
 
-    public Klinac unos() {
-        Klinac imeKlinca = new Klinac();
+    Klinac unos() {
+        Klinac noviKlinac = new Klinac();
         Scanner scanner = new Scanner(System.in);
-        String klinac = null;
-        while (klinac == null) {
+        String imeKlinca = null;
+        while (imeKlinca == null) {
             System.out.println("Unesite ime klinca");
-            if (samoSlova(scanner.nextLine())) {
+            imeKlinca = scanner.nextLine();
+            if (!samoSlova(imeKlinca)) {
                 System.out.println("Ime mora biti samo slova");
             } else {
-               imeKlinca.setIme(klinac);
+                noviKlinac.setIme(imeKlinca);
+                break;
             }
 
         }
-        return imeKlinca;
+        return noviKlinac;
     }
 
     private boolean samoSlova(String ime) {
