@@ -3,7 +3,7 @@ package com.robibp.trening;
 public class Klinac {
     private String ime;
 
-    public Klinac( ) {
+    Klinac() {
     }
 
 

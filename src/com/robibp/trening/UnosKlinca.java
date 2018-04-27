@@ -14,9 +14,10 @@ class UnosKlinca {
             imeKlinca = scanner.nextLine();
             if (!samoSlova(imeKlinca)) {
                 System.out.println("Ime mora biti samo slova");
+                imeKlinca = null;
             } else {
                 noviKlinac.setIme(imeKlinca);
-                break;
+
             }
 
         }

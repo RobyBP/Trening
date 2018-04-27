@@ -2,12 +2,10 @@ package com.robibp.trening;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Scanner;
 
 class EvidencijaDrive {
 
     public static void main(String[] args) {
-        Klinac klinac = new Klinac();
         UnosKlinca unosKlinca = new UnosKlinca();
         MenuChooser menuChooser = new MenuChooser();
         MenuEnum odabraniMenu = null;
@@ -21,7 +19,7 @@ class EvidencijaDrive {
                     break;
                 case EVIDENCIJA:
                     System.out.println("Odabrali ste EVIDENCIJA!");
-                    for(Klinac clan : klinci){
+                    for (Klinac clan : klinci) {
                         System.out.println(clan.getIme());
                     }
                     break;
