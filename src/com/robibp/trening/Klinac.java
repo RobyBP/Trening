@@ -3,9 +3,6 @@ package com.robibp.trening;
 public class Klinac {
     private String ime;
 
-    Klinac() {
-    }
-
 
     public String getIme() {
         return ime;
