@@ -2,7 +2,15 @@ package com.robibp.trening;
 
 public class Klinac {
     private String ime;
+    private int godine;
 
+    public int getGodine() {
+        return godine;
+    }
+
+    public void setGodine(int godine) {
+        this.godine = godine;
+    }
 
     public String getIme() {
         return ime;

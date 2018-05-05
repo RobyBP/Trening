@@ -22,6 +22,7 @@ class EvidencijaDrive {
                     System.out.println("Odabrali ste EVIDENCIJA!");
                     for (Klinac clan : klinci) {
                         System.out.println(clan.getIme());
+                        System.out.println(clan.getGodine());
                     }
                     break;
                 case IZLAZ:
