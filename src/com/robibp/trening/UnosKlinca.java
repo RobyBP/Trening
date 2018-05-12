@@ -11,6 +11,7 @@ class UnosKlinca {
         Scanner scanner = new Scanner(System.in);
         String imeKlinca = null;
         String godineKlinca = null;
+        String kilazaKlinca = null;
         while (imeKlinca == null) {
             System.out.println("Unesite ime klinca");
             imeKlinca = scanner.nextLine();
@@ -40,6 +41,24 @@ class UnosKlinca {
             }
 
         }
+        while (kilazaKlinca == null) {
+            System.out.println("Unesite kilazu klinca: ");
+            kilazaKlinca = scanner.nextLine();
+            if (!samoBrojevi(kilazaKlinca)) {
+                System.out.println("Unos moze biti samo cjelobrojni broj");
+                kilazaKlinca = null;
+            }
+            else{
+                if(Integer.parseInt(kilazaKlinca)<= 0){
+                    System.out.println("Kilaza ne moze biti manja ili jednaka nuli!");
+                    kilazaKlinca = null;
+                }
+                else {
+                    noviKlinac.setKilaza(Integer.parseInt(kilazaKlinca));
+                }
+            }
+
+        }
 
 
         return noviKlinac;
@@ -57,10 +76,10 @@ class UnosKlinca {
         return true;
     }
 
-    private boolean samoBrojevi(String godine) {
+    private boolean samoBrojevi(String broj) {
         boolean cijeliBroj = false;
         try {
-            Integer.parseInt(godine);
+            Integer.parseInt(broj);
             cijeliBroj = true;
         } catch (NumberFormatException exception) {
         }

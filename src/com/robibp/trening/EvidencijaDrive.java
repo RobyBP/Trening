@@ -23,6 +23,7 @@ class EvidencijaDrive {
                     for (Klinac clan : klinci) {
                         System.out.println(clan.getIme());
                         System.out.println(clan.getGodine());
+                        System.out.println(clan.getKilaza() + "kg");
                     }
                     break;
                 case IZLAZ:
