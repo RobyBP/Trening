@@ -1,6 +1,5 @@
 package com.robibp.trening;
 
-import java.util.InputMismatchException;
 import java.util.Scanner;
 
 class UnosKlinca {
@@ -29,13 +28,11 @@ class UnosKlinca {
             if (!samoBrojevi(godineKlinca)) {
                 System.out.println("Unos moze biti samo cjelobrojni broj");
                 godineKlinca = null;
-            }
-            else{
-                if(Integer.parseInt(godineKlinca)<= 0){
+            } else {
+                if (Integer.parseInt(godineKlinca) <= 0) {
                     System.out.println("Godine ne mogu biti manje ili jednake nuli!");
                     godineKlinca = null;
-                }
-                else {
+                } else {
                     noviKlinac.setGodine(Integer.parseInt(godineKlinca));
                 }
             }
@@ -47,13 +44,11 @@ class UnosKlinca {
             if (!samoBrojevi(kilazaKlinca)) {
                 System.out.println("Unos moze biti samo cjelobrojni broj");
                 kilazaKlinca = null;
-            }
-            else{
-                if(Integer.parseInt(kilazaKlinca)<= 0){
+            } else {
+                if (Integer.parseInt(kilazaKlinca) <= 0) {
                     System.out.println("Kilaza ne moze biti manja ili jednaka nuli!");
                     kilazaKlinca = null;
-                }
-                else {
+                } else {
                     noviKlinac.setKilaza(Integer.parseInt(kilazaKlinca));
                 }
             }
@@ -76,10 +71,10 @@ class UnosKlinca {
         return true;
     }
 
-    private boolean samoBrojevi(String broj) {
+    private boolean samoBrojevi(String godine) {
         boolean cijeliBroj = false;
         try {
-            Integer.parseInt(broj);
+            Integer.parseInt(godine);
             cijeliBroj = true;
         } catch (NumberFormatException exception) {
         }

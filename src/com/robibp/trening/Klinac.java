@@ -29,5 +29,9 @@ public class Klinac {
         this.ime = ime;
     }
 
+    public String toString() {
+        return ime + " " + " " + godine + " " + kilaza + "kg";
+    }
+
 
 }
