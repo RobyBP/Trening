@@ -7,6 +7,7 @@ class UnosKlinca {
 
     Klinac unos() {
         Klinac noviKlinac = new Klinac();
+        TextValidationUtils textValidation = new TextValidationUtils();
         Scanner scanner = new Scanner(System.in);
         String imeKlinca = null;
         String godineKlinca = null;
@@ -14,7 +15,7 @@ class UnosKlinca {
         while (imeKlinca == null) {
             System.out.println("Unesite ime klinca");
             imeKlinca = scanner.nextLine();
-            if (!samoSlova(imeKlinca)) {
+            if (!textValidation.samoSlova(imeKlinca)) {
                 System.out.println("Ime mora biti samo slova");
                 imeKlinca = null;
             } else {
@@ -25,7 +26,7 @@ class UnosKlinca {
         while (godineKlinca == null) {
             System.out.println("Unesite godine klinca: ");
             godineKlinca = scanner.nextLine();
-            if (!samoBrojevi(godineKlinca)) {
+            if (!textValidation.samoBrojevi(godineKlinca)) {
                 System.out.println("Unos moze biti samo cjelobrojni broj");
                 godineKlinca = null;
             } else {
@@ -41,7 +42,7 @@ class UnosKlinca {
         while (kilazaKlinca == null) {
             System.out.println("Unesite kilazu klinca: ");
             kilazaKlinca = scanner.nextLine();
-            if (!samoBrojevi(kilazaKlinca)) {
+            if (!textValidation.samoBrojevi(kilazaKlinca)) {
                 System.out.println("Unos moze biti samo cjelobrojni broj");
                 kilazaKlinca = null;
             } else {
@@ -59,25 +60,5 @@ class UnosKlinca {
         return noviKlinac;
     }
 
-    private boolean samoSlova(String ime) {
-        char[] slova = ime.toCharArray();
 
-        for (char slovo : slova) {
-            if (!Character.isLetter(slovo)) {
-                return false;
-            }
-        }
-
-        return true;
-    }
-
-    private boolean samoBrojevi(String godine) {
-        boolean cijeliBroj = false;
-        try {
-            Integer.parseInt(godine);
-            cijeliBroj = true;
-        } catch (NumberFormatException exception) {
-        }
-        return cijeliBroj;
-    }
 }
