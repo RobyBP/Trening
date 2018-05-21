@@ -2,7 +2,6 @@ package com.robibp.trening;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Scanner;
 
 class EvidencijaDrive {
 
@@ -17,12 +16,17 @@ class EvidencijaDrive {
             switch (odabraniMenu) {
                 case UNOS:
                     System.out.println("Odabrali ste UNOS!");
-                    klinci.add(unosKlinca.unos());
+
+                    Klinac noviUnos = unosKlinca.unos();
+                    if (noviUnos != null) {
+                        klinci.add(noviUnos);
+                    }
+
                     break;
                 case EVIDENCIJA:
                     System.out.println("Odabrali ste EVIDENCIJA!");
-                    for (Klinac clan : klinci) {
-                        System.out.println(clan);
+                    for (Klinac klinac : klinci) {
+                        System.out.println(klinac);
                     }
                     break;
                 case IZLAZ:

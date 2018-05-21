@@ -5,22 +5,22 @@ import java.util.Scanner;
 public class UnosImena {
 
     private Scanner scanner = new Scanner(System.in);
-    private String noviKlinac;
 
     String unosImena() {
-        String imeKlinca = null;
 
-        while (imeKlinca == null) {
+        while (true) {
             System.out.println("Unesite ime klinca");
-            imeKlinca = scanner.nextLine();
-            if (!TextValidationUtils.samoSlova(imeKlinca)) {
-                System.out.println("Ime mora biti samo slova");
-                imeKlinca = null;
+
+            String imeKlinca = scanner.nextLine();
+
+            if (TextValidationUtils.isBreak(imeKlinca)) {
+                return null;
+            } else if (TextValidationUtils.samoSlova(imeKlinca)) {
+                return imeKlinca;
             } else {
-                noviKlinac = imeKlinca;
+                System.out.println("Ime mora biti samo slova");
             }
         }
-        return noviKlinac;
 
     }
 }

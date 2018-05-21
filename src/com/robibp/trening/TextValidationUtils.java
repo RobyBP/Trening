@@ -25,4 +25,8 @@ public class TextValidationUtils {
         }
         return false;
     }
+
+    public static boolean isBreak(String text) {
+        return text.equals("-");
+    }
 }

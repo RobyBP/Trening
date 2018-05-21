@@ -2,18 +2,24 @@ package com.robibp.trening;
 
 class UnosKlinca {
 
-
     Klinac unos() {
         Klinac noviKlinac = new Klinac();
-        UnosImena imeKlinca = new UnosImena();
-        UnosGodina godineKlinca = new UnosGodina();
-        UnosKilaze kilazaKlinca = new UnosKilaze();
-        noviKlinac.setIme(imeKlinca.unosImena());
-        noviKlinac.setGodine(godineKlinca.unosGodina());
-        noviKlinac.setKilaza(kilazaKlinca.unosKilaze());
+
+        UnosImena unosImena = new UnosImena();
+//        UnosGodina unosGodina = new UnosGodina();
+//        UnosKilaze unosKilaze = new UnosKilaze();
+
+        String ime = unosImena.unosImena();
+
+        if (ime == null) {
+            return null;
+        }
+
+        noviKlinac.setIme(ime);
+//        noviKlinac.setGodine(unosGodina.unosGodina());
+//        noviKlinac.setKilaza(unosKilaze.unosKilaze());
 
         return noviKlinac;
     }
-
 
 }
