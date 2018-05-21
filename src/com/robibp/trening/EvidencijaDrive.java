@@ -10,6 +10,7 @@ class EvidencijaDrive {
         UnosKlinca unosKlinca = new UnosKlinca();
         MenuChooser menuChooser = new MenuChooser();
         MenuEnum odabraniMenu = null;
+
         List<Klinac> klinci = new ArrayList<>();
         while (odabraniMenu != MenuEnum.IZLAZ) {
             odabraniMenu = menuChooser.askUser();

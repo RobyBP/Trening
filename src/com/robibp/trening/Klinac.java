@@ -1,6 +1,7 @@
 package com.robibp.trening;
 
 public class Klinac {
+
     private String ime;
     private int godine;
     private int kilaza;
@@ -29,9 +30,12 @@ public class Klinac {
         this.ime = ime;
     }
 
+    @Override
     public String toString() {
-        return ime + " " + " " + godine + " " + kilaza + "kg";
+        return "Klinac{" +
+                "ime='" + ime + '\'' +
+                ", godine=" + godine +
+                ", kilaza=" + kilaza +
+                '}';
     }
-
-
 }

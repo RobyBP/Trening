@@ -2,7 +2,10 @@ package com.robibp.trening;
 
 public class TextValidationUtils {
 
-    public boolean samoSlova(String ime) {
+    private TextValidationUtils() {
+    }
+
+    public static boolean samoSlova(String ime) {
         char[] slova = ime.toCharArray();
 
         for (char slovo : slova) {
@@ -14,13 +17,12 @@ public class TextValidationUtils {
         return true;
     }
 
-    public boolean samoBrojevi(String godine) {
-        boolean cijeliBroj = false;
+    public static boolean samoBrojevi(String godine) {
         try {
             Integer.parseInt(godine);
-            cijeliBroj = true;
+            return true;
         } catch (NumberFormatException exception) {
         }
-        return cijeliBroj;
+        return false;
     }
 }

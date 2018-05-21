@@ -4,16 +4,14 @@ import java.util.Scanner;
 
 public class UnosGodina {
 
-    Scanner scanner = new Scanner(System.in);
-    String noviKlinac;
-    TextValidationUtils textValidation = new TextValidationUtils();
+    private Scanner scanner = new Scanner(System.in);
 
     public int unosGodina() {
         String godineKlinca = null;
         while (godineKlinca == null) {
             System.out.println("Unesite godine klinca: ");
             godineKlinca = scanner.nextLine();
-            if (!textValidation.samoBrojevi(godineKlinca)) {
+            if (!TextValidationUtils.samoBrojevi(godineKlinca)) {
                 System.out.println("Unos moze biti samo cjelobrojni broj");
                 godineKlinca = null;
             } else {
